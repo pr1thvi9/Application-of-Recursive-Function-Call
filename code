@@ -1,0 +1,21 @@
+int Tribonacciseries(int n){
+    if(n==1){
+        return 0;
+    }
+    if(n==2){
+        return 1;
+    }
+    if(n==3){
+        return 1;
+    }
+    return Tribonacciseries(n-1)+Tribonacciseries(n-2)+Tribonacciseries(n-3);    
+}
+int main() {
+    int count,i;
+printf("enter the number of terms of tribonnaci series to display");
+scanf("%d",&count);
+for(int i=1;i<=count;i++){
+    printf("%d, ",Tribonacciseries(i));
+}
+    return 0;
+}
